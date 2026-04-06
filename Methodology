@@ -1,0 +1,11 @@
+The methodology for this project involves using ServiceNow Import Sets and Transform Maps to automate data import and relationship mapping.
+
+Collect and prepare data from external sources (e.g., Excel file)
+Upload data into Import Set (staging table)
+Define Transform Map to map source fields to target table fields
+Apply field mapping and data transformation rules
+Use scripts to handle complex mappings (e.g., manager reference)
+Execute transformation to load data into the target table
+Use Dot Walking to access and manage related table data efficiently
+
+This methodology ensures accurate, automated, and efficient data integration.
