@@ -1,0 +1,19 @@
+The project is implemented using ServiceNow Import Sets and Transform Maps.
+
+Steps:
+
+Upload Excel file into Import Set
+Create staging table for temporary data storage
+Configure Transform Map to map fields to target table
+Use Dot Walking for relationship mapping between tables
+Add script to map related records (e.g., manager)
+Execute transform to move data into target table
+
+Script used:
+
+var mgr = new GlideRecord('sys_user');
+mgr.addQuery('email', source.u_manager_email);
+mgr.query();
+if (mgr.next()) {
+    target.manager = mgr.sys_id;
+}
